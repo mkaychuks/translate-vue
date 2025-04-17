@@ -1,5 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import HeroSection from "./components/HeroSection.vue";
+import NavigationBar from "./components/NavigationBar.vue";
+import TranslateSection from "./components/TranslateSection.vue";
+</script>
 
 <template>
-  <h1>engLIgbo</h1>
+  <NavigationBar />
+  <HeroSection />
+  <TranslateSection />
 </template>
