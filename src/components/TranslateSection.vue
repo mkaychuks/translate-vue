@@ -6,10 +6,12 @@ import axios from "axios";
 const text = ref<string>("");
 const translatedText = ref<string>("");
 const isLoading = ref<boolean>(false);
+const disableInput = ref<boolean>(false);
 
 // calling the function to reach the api
 const translateText = async () => {
   isLoading.value = true;
+  disableInput.value = true;
   try {
     await axios
       .post("https://deeigbo-server.onrender.com/translate", {
@@ -18,8 +20,12 @@ const translateText = async () => {
       .then((response) => {
         translatedText.value = response.data?.translation;
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        disableInput.value = false;
+        console.log(err);
+      });
   } catch (error) {
+    disableInput.value = false;
     console.log(error);
   }
   isLoading.value = false;
@@ -29,6 +35,7 @@ const translateText = async () => {
 const clear = () => {
   text.value = "";
   translatedText.value = "";
+  disableInput.value = false;
 };
 </script>
 <template>
@@ -38,6 +45,7 @@ const clear = () => {
     >
       <input
         v-model="text"
+        :disabled="disableInput"
         type="text"
         placeholder="What are you translating today?.."
         class="w-full outline-none border-gray-400 border-2 rounded-lg px-2 md:px-4 py-2 md:py-4 text-sm md:text-lg"
