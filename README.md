@@ -1,20 +1,27 @@
-# translate-vue
+# iTranslate - VueJS Frontend
 
-This template should help get you started developing with Vue 3 in Vite.
+## 🎉 Welcome to iTranslate
 
-## Recommended IDE Setup
+A VueJS mini-frontend project that is powered by a REST API backend, thanks to [@Chidera Igbanugo]("https://github.com/ChidexWorld"). This
+project was developed to increase my profiency in using and consuming backend REST APIs
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 📦 Technologies Used
 
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
+- **VueJS/Typescript** - Frontend framework.
+- **REST API** - From the backend.
+- **Axios** - Making http request to the REST API.
+- **TailwindCSS** - For styling components.
+- **Phosphoricons** - Icon library used.
+- **date-fns** - An npm package used to seamlessly format dates.
 
 ## Project Setup
+
+### Clone the Repository
+
+```sh
+git clone https://github.com/mkaychuks/translate-vue.git
+cd translate-vue
+```
 
 ```sh
 npm install
